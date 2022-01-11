@@ -51,3 +51,9 @@ def delete_customer(id):
             customer_index = x
     if customer_index >= 0:
         CUSTOMERS.pop(customer_index)
+        
+def update_customer(id, newcusty):
+    for index, customer in enumerate(CUSTOMERS):
+        if customer["id"] == id:
+            CUSTOMERS[index] = newcusty
+            break

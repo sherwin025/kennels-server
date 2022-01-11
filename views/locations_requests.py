@@ -47,3 +47,9 @@ def delete_location(id):
             location_id = x
     if location_id >= 0:
         LOCATIONS.pop(location_id)
+        
+def update_location(id, locationnew):
+    for index, location in enumerate(LOCATIONS):
+        if location["id"] == id:
+            LOCATIONS[index] = locationnew
+            break
